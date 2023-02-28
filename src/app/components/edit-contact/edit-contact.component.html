@@ -1,0 +1,24 @@
+<h2>Edit Contact</h2>
+
+<div *ngIf="contact">
+  <form (submit)="saveChanges(name.value, email.value, phone.value)">
+    <label>
+      Name:
+      <input type="text" #name [value]="contact.name" required>
+    </label>
+    <br>
+    <label>
+      Email:
+      <input type="email" #email [value]="contact.email" required>
+    </label>
+    <br>
+    <label>
+      Phone:
+      <input type="tel" #phone [value]="contact.phone" required>
+    </label>
+    <br>
+    <button type="submit">Save Changes</button>
+  </form>
+</div>
+
+
